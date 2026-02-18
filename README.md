@@ -5,17 +5,17 @@ gulp-umd
 
 This repository provides a simple way to build your files with support for the design and implementation of the Universal Module Definition (UMD) API for JavaScript modules. These are modules which are capable of working everywhere, be it in the client, on the server or elsewhere.
 
-The UMD pattern typically attempts to offer compatibility with the most popular script loaders of the day (e.g RequireJS amongst others). In many cases it uses [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) as a base, with special-casing added to handle [CommonJS](http://wiki.commonjs.org/wiki/CommonJS) compatibility.
+The UMD pattern typically attempts to offer compatibility with the most popular script loaders of the day (e.g RequireJS amongst others). In many cases it uses [AMD](https://github.com/Unity-Billal-mesloub/amdjs-api/wiki/AMD) as a base, with special-casing added to handle [CommonJS](http://wiki.commonjs.org/wiki/CommonJS) compatibility.
 
 ## Variations
 
 ### Regular Module
 
-* amdNodeWeb / returnExports / [templates/returnExports.js](https://github.com/umdjs/umd/blob/master/templates/returnExports.js) -
+* amdNodeWeb / returnExports / [templates/returnExports.js](https://github.com/Unity-Billal-mesloub/umd/blob/main/templates/returnExports.js) -
   Defines a module that works in Node, AMD and browser globals. If you also want
   to export a global even when AMD is in play (useful if you are loading other
   scripts that still expect that global), use
-  [returnExportsGlobal.js](https://github.com/umdjs/umd/blob/master/templates/returnExportsGlobal.js).
+  [returnExportsGlobal.js](https://github.com/Unity-Billal-mesloub/umd/blob/main/templates/returnExportsGlobal.js).
 
 * amd / [templates/amd.js](test/fixture/amd/testWithDependencies.js)
   Defines a module that works in AMD.
@@ -35,7 +35,7 @@ The UMD pattern typically attempts to offer compatibility with the most popular 
 * web / [templates/web.js](test/fixture/web/testWithDependencies.js)
   Defines a module that works in browser globals.
 
-See more variation options that can be added as [templates onto this project](https://github.com/eduardolundgren/gulp-umd/tree/master/templates) on the [UMD (Universal Module Definition) patterns](https://github.com/umdjs/umd).
+See more variation options that can be added as [templates onto this project](https://github.com/Unity-Billal-mesloub/gulp-umd/tree/main/templates) on the [UMD (Universal Module Definition) patterns](https://github.com/Unity-Billal-mesloub/umd).
 
 ## Options
 
@@ -281,7 +281,7 @@ After build `build/foo.js will look like:
 
 ## Templates
 
-In order to use any of the variations defined on the [UMD (Universal Module Definition) patterns](https://github.com/umdjs/umd) repository you can use the following template keys:
+In order to use any of the variations defined on the [UMD (Universal Module Definition) patterns](https://github.com/Unity-Billal-mesloub/umd) repository you can use the following template keys:
 
 * `<%= amd %>`: Contains the AMD normalized values from the options dependencies array, e.g. `['a', 'b']` turns into `['a', 'b']`.
 * `<%= cjs %>`: Contains the CommonJS normalized values from the options dependencies array, e.g. `['a', 'b']` turns into `require('a'), require('b')`.
